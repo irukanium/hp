@@ -1,0 +1,157 @@
+body {
+	font-family: "M PLUS 1p", sans-serif;
+	background-color: #000000;
+	color: #ffffff;
+	margin: 18px;
+　-webkit-animation: fadeIn 1.5s ease 0s 1 normal;
+　animation: fadeIn 1.5s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0
+    }
+
+    100% {
+      opacity: 1
+    }
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0
+    }
+
+    100% {
+      opacity: 1
+    }
+  }
+
+footer {
+	text-align: right;
+}
+
+footer a {
+	color: #ffffff;
+}
+
+#profile {
+	display: flex;
+}
+
+#hr {
+	border: 1px dashed #ffffff;
+	margin: 12px 0 0 0;
+}
+
+.div {
+	padding: 16px;
+	background: #313339;
+}
+
+#icon {
+	width: 96px;
+	height: 96px;
+	text-align: right;
+	border-radius:50%;
+}
+
+#myname {
+	font-size:  24px;
+	font-weight: bold;
+	foet-family: none;
+}
+
+.link {
+	width: 40px;
+	height: 40px;
+}
+
+.box {
+	border: 2px solid #fff;
+	margin: 18px 0 18px 0x;
+	background: #313339;
+	height: 60px;
+    display: flex;
+}
+
+.box a {
+	width: 100%;
+	display: block;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+#menu {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	display: inline-block;
+	background: #313339;
+	padding: 12px;
+	border: 2px solid #ffffff;
+	visibility: hidden;
+}
+
+#menu a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.box span {
+	padding: 8px 8px 0px 0px;
+}
+
+#x a {
+	background: url(images/x.jpg) no-repeat 0 center / 60px auto;
+    padding: 0px 0px 0px 70px;
+}
+
+.openbtn{
+	/*ボタン内側の基点となるためrelativeを指定。
+追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+	position: absolute;
+	top: 4px;
+	right: 10px;
+	width: 50px;
+    height:50px;
+	cursor: pointer;
+}
+	
+/*ボタン内側*/
+
+.openbtn span{
+    display: inline-block;
+    transition: all .2s;/*アニメーションの設定*/
+    position: absolute;
+    left: 13px;
+    height: 2px;
+	background: #ffffff;
+  }
+
+
+.openbtn span:nth-of-type(1) {
+	top:22px;	
+  	width: 50%;
+}
+
+.openbtn span:nth-of-type(2) {
+	top:29px;
+  	width:30%;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+
+.openbtn.active span:nth-of-type(1) {
+    top: 20px;
+    left: 16px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 35%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+    top: 32px;
+    left: 16px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 35%;
+}
